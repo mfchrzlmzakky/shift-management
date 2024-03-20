@@ -10,71 +10,207 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Jadwal Bulan {{ now()->translatedFormat('F') }} Tahun {{ now()->year }}</h6>
+    <h6 class="m-0 font-weight-bold text-primary">Jadwal Bulan {{ \Carbon\Carbon::now()->month(4)->translatedFormat('F') }} Tahun {{ now()->year }}</h6>
   </div>
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th>Nama</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Age</th>
-            <th>Start date</th>
-            <th>Salary</th>
+            <th rowspan="3" class="text-center align-middle">Nama</th>
+            <th colspan="{{ \Carbon\Carbon::now()->month(4)->daysInMonth }}" class="text-center">Hari / Tanggal</th>
+          </tr>
+          <tr>
+            @for ($i = 1; $i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1; $i++) @php $myDate=$i . '/4/2024' ; @endphp <th class="text-center text-vertical">
+                {{ \Carbon\Carbon::createFromFormat("d/m/Y", $myDate)->translatedFormat("l") }}
+              </th>
+              @endfor
+          </tr>
+          <tr>
+            @for ($i = 1; $i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1; $i++) <th class="text-center">{{ $i }}</th>
+              @endfor
           </tr>
         </thead>
-        <tfoot>
-          <tr>
-            <th>Nama</th>
-            <th>Position</th>
-            <th>Office</th>
-            <th>Age</th>
-            <th>Start date</th>
-            <th>Salary</th>
-          </tr>
-        </tfoot>
         <tbody>
           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
+            <td>Mustofa</td>
+            @if (\Carbon\Carbon::now()->month(4)->daysInMonth == 31)
+            @elseif (\Carbon\Carbon::now()->month(4)->daysInMonth == 30)
+              @php
+                $i=1;
+              @endphp
+              @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
+                <td class="text-center align-middle">S</td>
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">P</td>
+                @php
+                  $i++;
+                @endphp
+                @if ($i == 28)
+                  <td class="text-center align-middle">S</td>
+                @else
+                  <td class="text-center align-middle bg-danger text-white">L</td>
+                @endif
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">M</td>
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">M</td>
+                @php
+                  $i++;
+                @endphp
+              @endwhile
+            @else
+            @endif
           </tr>
           <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>2011/07/25</td>
-            <td>$170,750</td>
+            <td>Ulum</td>
+            @if (\Carbon\Carbon::now()->month(4)->daysInMonth == 31)
+            @elseif (\Carbon\Carbon::now()->month(4)->daysInMonth == 30)
+              @php
+                $i=1;
+              @endphp
+              @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
+                <td class="text-center align-middle">M</td>
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">S</td>
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">P</td>
+                @php
+                  $i++;
+                @endphp
+                @if ($i == 29)
+                  <td class="text-center align-middle">S</td>
+                @else
+                  <td class="text-center align-middle bg-danger text-white">L</td>
+                @endif
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">M</td>
+                @php
+                  $i++;
+                @endphp
+              @endwhile
+            @else
+            @endif
           </tr>
           <tr>
-            <td>Ashton Cox</td>
-            <td>Junior Technical Author</td>
-            <td>San Francisco</td>
-            <td>66</td>
-            <td>2009/01/12</td>
-            <td>$86,000</td>
+            <td>Roni</td>
+            @if (\Carbon\Carbon::now()->month(4)->daysInMonth == 31)
+            @elseif (\Carbon\Carbon::now()->month(4)->daysInMonth == 30)
+              @php
+                $i=1;
+              @endphp
+              @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
+                <td class="text-center align-middle">M</td>
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">M</td>
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">S</td>
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">P</td>
+                @php
+                  $i++;
+                @endphp
+                @if ($i == 30)
+                  <td class="text-center align-middle">S</td>
+                @else
+                  <td class="text-center align-middle bg-danger text-white">L</td>
+                @endif
+                @php
+                  $i++;
+                @endphp
+              @endwhile
+            @else
+            @endif
           </tr>
           <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
-            <td>22</td>
-            <td>2012/03/29</td>
-            <td>$433,060</td>
+            <td>Supri</td>
+            @if (\Carbon\Carbon::now()->month(4)->daysInMonth == 31)
+            @elseif (\Carbon\Carbon::now()->month(4)->daysInMonth == 30)
+              @php
+                $i=1;
+              @endphp
+              @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
+                @if ($i == 1)
+                  <td class="text-center align-middle">S</td>
+                @else
+                  <td class="text-center align-middle bg-danger text-white">L</td>
+                @endif
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">M</td>
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">M</td>
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">S</td>
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">P</td>
+                @php
+                  $i++;
+                @endphp
+              @endwhile
+            @else
+            @endif
           </tr>
           <tr>
-            <td>Airi Satou</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>33</td>
-            <td>2008/11/28</td>
-            <td>$162,700</td>
+            <td>Eko</td>
+            @if (\Carbon\Carbon::now()->month(4)->daysInMonth == 31)
+            @elseif (\Carbon\Carbon::now()->month(4)->daysInMonth == 30)
+              @php
+                $i=1;
+              @endphp
+              @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
+                <td class="text-center align-middle">P</td>
+                @php
+                  $i++;
+                @endphp
+                @if ($i == 2)
+                  <td class="text-center align-middle">S</td>
+                @else
+                  <td class="text-center align-middle bg-danger text-white">L</td>
+                @endif
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">M</td>
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">M</td>
+                @php
+                  $i++;
+                @endphp
+                <td class="text-center align-middle">S</td>
+                @php
+                  $i++;
+                @endphp
+              @endwhile
+            @else
+            @endif
           </tr>
         </tbody>
       </table>
