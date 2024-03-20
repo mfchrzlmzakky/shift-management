@@ -10,7 +10,7 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Jadwal Bulan April Tahun 2024</h6>
+    <h6 class="m-0 font-weight-bold text-primary">Jadwal Bulan {{ now()->translatedFormat('F') }} Tahun {{ now()->year }}</h6>
   </div>
   <div class="card-body">
     <div class="table-responsive">
