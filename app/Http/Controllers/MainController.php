@@ -65,7 +65,6 @@ class MainController
 
   public function cetak_pdf()
   {
-    $pdf = PDF::loadview('cetak_pdf', ['pegawai' => 'ya']);
-    return $pdf->download('jadwal-shift.pdf');
+    return PDF::loadview('cetak_pdf')->setPaper('a4', 'landscape')->download('jadwal-shift.pdf');
   }
 }
