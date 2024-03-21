@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use PDF;
 
 class MainController
 {
@@ -60,5 +61,11 @@ class MainController
   public function destroy(string $id)
   {
     //
+  }
+
+  public function cetak_pdf()
+  {
+    $pdf = PDF::loadview('cetak_pdf', ['pegawai' => 'ya']);
+    return $pdf->download('jadwal-shift.pdf');
   }
 }

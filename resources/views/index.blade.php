@@ -4,7 +4,7 @@
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
   <h1 class="h3 mb-0 text-gray-800">Jadwal Terkini</h1>
-  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Cetak Jadwal</a>
+  <a href="/cetak-pdf" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Cetak Jadwal</a>
 </div>
 
 <!-- DataTales Example -->
@@ -36,181 +36,181 @@
             <td>Mustofa</td>
             @if (\Carbon\Carbon::now()->month(4)->daysInMonth == 31)
             @elseif (\Carbon\Carbon::now()->month(4)->daysInMonth == 30)
+            @php
+            $i=1;
+            @endphp
+            @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
+              <td class="text-center align-middle">S</td>
               @php
-                $i=1;
+              $i++;
               @endphp
-              @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
-                <td class="text-center align-middle">S</td>
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">P</td>
-                @php
-                  $i++;
-                @endphp
-                @if ($i == 28)
-                  <td class="text-center align-middle">S</td>
-                @else
-                  <td class="text-center align-middle bg-danger text-white">L</td>
-                @endif
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">M</td>
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">M</td>
-                @php
-                  $i++;
-                @endphp
+              <td class="text-center align-middle">P</td>
+              @php
+              $i++;
+              @endphp
+              @if ($i == 28)
+              <td class="text-center align-middle">S</td>
+              @else
+              <td class="text-center align-middle bg-danger text-white">L</td>
+              @endif
+              @php
+              $i++;
+              @endphp
+              <td class="text-center align-middle">M</td>
+              @php
+              $i++;
+              @endphp
+              <td class="text-center align-middle">M</td>
+              @php
+              $i++;
+              @endphp
               @endwhile
-            @else
-            @endif
+              @else
+              @endif
           </tr>
           <tr>
             <td>Ulum</td>
             @if (\Carbon\Carbon::now()->month(4)->daysInMonth == 31)
             @elseif (\Carbon\Carbon::now()->month(4)->daysInMonth == 30)
+            @php
+            $i=1;
+            @endphp
+            @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
+              <td class="text-center align-middle">M</td>
               @php
-                $i=1;
+              $i++;
               @endphp
-              @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
-                <td class="text-center align-middle">M</td>
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">S</td>
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">P</td>
-                @php
-                  $i++;
-                @endphp
-                @if ($i == 29)
-                  <td class="text-center align-middle">S</td>
-                @else
-                  <td class="text-center align-middle bg-danger text-white">L</td>
-                @endif
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">M</td>
-                @php
-                  $i++;
-                @endphp
+              <td class="text-center align-middle">S</td>
+              @php
+              $i++;
+              @endphp
+              <td class="text-center align-middle">P</td>
+              @php
+              $i++;
+              @endphp
+              @if ($i == 29)
+              <td class="text-center align-middle">S</td>
+              @else
+              <td class="text-center align-middle bg-danger text-white">L</td>
+              @endif
+              @php
+              $i++;
+              @endphp
+              <td class="text-center align-middle">M</td>
+              @php
+              $i++;
+              @endphp
               @endwhile
-            @else
-            @endif
+              @else
+              @endif
           </tr>
           <tr>
             <td>Roni</td>
             @if (\Carbon\Carbon::now()->month(4)->daysInMonth == 31)
             @elseif (\Carbon\Carbon::now()->month(4)->daysInMonth == 30)
+            @php
+            $i=1;
+            @endphp
+            @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
+              <td class="text-center align-middle">M</td>
               @php
-                $i=1;
+              $i++;
               @endphp
-              @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
-                <td class="text-center align-middle">M</td>
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">M</td>
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">S</td>
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">P</td>
-                @php
-                  $i++;
-                @endphp
-                @if ($i == 30)
-                  <td class="text-center align-middle">S</td>
-                @else
-                  <td class="text-center align-middle bg-danger text-white">L</td>
-                @endif
-                @php
-                  $i++;
-                @endphp
+              <td class="text-center align-middle">M</td>
+              @php
+              $i++;
+              @endphp
+              <td class="text-center align-middle">S</td>
+              @php
+              $i++;
+              @endphp
+              <td class="text-center align-middle">P</td>
+              @php
+              $i++;
+              @endphp
+              @if ($i == 30)
+              <td class="text-center align-middle">S</td>
+              @else
+              <td class="text-center align-middle bg-danger text-white">L</td>
+              @endif
+              @php
+              $i++;
+              @endphp
               @endwhile
-            @else
-            @endif
+              @else
+              @endif
           </tr>
           <tr>
             <td>Supri</td>
             @if (\Carbon\Carbon::now()->month(4)->daysInMonth == 31)
             @elseif (\Carbon\Carbon::now()->month(4)->daysInMonth == 30)
+            @php
+            $i=1;
+            @endphp
+            @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
+              @if ($i == 1)
+              <td class="text-center align-middle">S</td>
+              @else
+              <td class="text-center align-middle bg-danger text-white">L</td>
+              @endif
               @php
-                $i=1;
+              $i++;
               @endphp
-              @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
-                @if ($i == 1)
-                  <td class="text-center align-middle">S</td>
-                @else
-                  <td class="text-center align-middle bg-danger text-white">L</td>
-                @endif
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">M</td>
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">M</td>
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">S</td>
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">P</td>
-                @php
-                  $i++;
-                @endphp
+              <td class="text-center align-middle">M</td>
+              @php
+              $i++;
+              @endphp
+              <td class="text-center align-middle">M</td>
+              @php
+              $i++;
+              @endphp
+              <td class="text-center align-middle">S</td>
+              @php
+              $i++;
+              @endphp
+              <td class="text-center align-middle">P</td>
+              @php
+              $i++;
+              @endphp
               @endwhile
-            @else
-            @endif
+              @else
+              @endif
           </tr>
           <tr>
             <td>Eko</td>
             @if (\Carbon\Carbon::now()->month(4)->daysInMonth == 31)
             @elseif (\Carbon\Carbon::now()->month(4)->daysInMonth == 30)
+            @php
+            $i=1;
+            @endphp
+            @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
+              <td class="text-center align-middle">P</td>
               @php
-                $i=1;
+              $i++;
               @endphp
-              @while ($i < \Carbon\Carbon::now()->month(4)->daysInMonth + 1)
-                <td class="text-center align-middle">P</td>
-                @php
-                  $i++;
-                @endphp
-                @if ($i == 2)
-                  <td class="text-center align-middle">S</td>
-                @else
-                  <td class="text-center align-middle bg-danger text-white">L</td>
-                @endif
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">M</td>
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">M</td>
-                @php
-                  $i++;
-                @endphp
-                <td class="text-center align-middle">S</td>
-                @php
-                  $i++;
-                @endphp
+              @if ($i == 2)
+              <td class="text-center align-middle">S</td>
+              @else
+              <td class="text-center align-middle bg-danger text-white">L</td>
+              @endif
+              @php
+              $i++;
+              @endphp
+              <td class="text-center align-middle">M</td>
+              @php
+              $i++;
+              @endphp
+              <td class="text-center align-middle">M</td>
+              @php
+              $i++;
+              @endphp
+              <td class="text-center align-middle">S</td>
+              @php
+              $i++;
+              @endphp
               @endwhile
-            @else
-            @endif
+              @else
+              @endif
           </tr>
         </tbody>
       </table>
