@@ -9,7 +9,6 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "barryvdh/laravel-dompdf": "^2.1",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9"
     },
@@ -53,12 +52,6 @@
     },
     "extra": {
         "laravel": {
-            "providers": [
-                "Barryvdh\\DomPDF\\ServiceProvider"
-            ],
-            "aliases": {
-                "PDF": "Barryvdh\\DomPDF\\Facade"
-            },
             "dont-discover": []
         }
     },
