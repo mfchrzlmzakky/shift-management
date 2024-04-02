@@ -11,7 +11,9 @@ class MainController
    */
   public function index()
   {
-    return view('index');
+    return view('index', [
+      "title" => 'Jadwal Terkini',
+    ]);
   }
 
   /**
