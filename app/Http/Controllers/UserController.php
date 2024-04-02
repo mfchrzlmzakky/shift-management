@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController
@@ -11,7 +12,10 @@ class UserController
    */
   public function index()
   {
-    return view('users.index');
+    return view('users.index', [
+      "employees" => User::all(),
+      "title" => "Daftar Karyawan",
+    ]);
   }
 
   /**
