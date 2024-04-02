@@ -61,7 +61,6 @@
             <h6 class="collapse-header">Manajemen Jadwal:</h6>
             <a class="collapse-item" href="cards.html">Daftar Jadwal</a>
             <a class="collapse-item" href="buttons.html">Buat Jadwal</a>
-            <a class="collapse-item" href="buttons.html">Hapus Jadwal</a>
           </div>
         </div>
       </li>
@@ -76,9 +75,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Manajemen Karyawan:</h6>
             <a class="collapse-item" href="/users">Daftar Karyawan</a>
-            <a class="collapse-item" href="utilities-border.html">Tambah Karyawan</a>
-            <a class="collapse-item" href="utilities-animation.html">Edit Karyawan</a>
-            <a class="collapse-item" href="utilities-other.html">Hapus Karyawan</a>
+            <a class="collapse-item" href="/users/create">Tambah Karyawan</a>
           </div>
         </div>
       </li>
